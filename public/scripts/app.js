@@ -9,7 +9,8 @@ var template = React.createElement(
 );
 var appObject = {
     title: "Root",
-    subTitle: "RootSub"
+    subTitle: "RootSub",
+    options: ["One", "Two"]
 };
 var template2 = React.createElement(
     "div",
@@ -29,9 +30,23 @@ var template2 = React.createElement(
         " "
     ),
     React.createElement(
-        "p",
+        "ol",
         null,
-        "25"
+        React.createElement(
+            "li",
+            null,
+            "Item One"
+        ),
+        React.createElement(
+            "li",
+            null,
+            " Item Two"
+        ),
+        React.createElement(
+            "li",
+            null,
+            " Item Three"
+        )
     )
 );
 var appRoot = document.getElementById('app');
