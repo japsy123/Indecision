@@ -12,6 +12,8 @@ var appObject = {
     subTitle: "RootSub",
     options: ["One", "Two"]
 };
+var appRoot = document.getElementById('app');
+
 var template2 = React.createElement(
     "div",
     null,
@@ -56,41 +58,50 @@ var template2 = React.createElement(
 var count = 0;
 
 var addOne = function addOne() {
+
+    count++;
     console.log("Add");
+    renderCounterApp();
 };
 var minusOne = function minusOne() {
+    count--;
     console.log("Minus");
+    renderCounterApp();
 };
 
 var reset = function reset() {
+
+    count = 0;
     console.log("Reset");
+    renderCounterApp();
 };
-var template3 = React.createElement(
-    "div",
-    null,
-    React.createElement(
-        "h1",
+var renderCounterApp = function renderCounterApp() {
+    var template3 = React.createElement(
+        "div",
         null,
-        "Count: ",
-        count
-    ),
-    React.createElement(
-        "button",
-        { onClick: addOne },
-        "+1 "
-    ),
-    React.createElement(
-        "button",
-        { onClick: minusOne },
-        " -1"
-    ),
-    React.createElement(
-        "button",
-        { onClick: reset },
-        " Reset"
-    )
-);
+        React.createElement(
+            "h1",
+            null,
+            "Count: ",
+            count
+        ),
+        React.createElement(
+            "button",
+            { onClick: addOne },
+            "+1 "
+        ),
+        React.createElement(
+            "button",
+            { onClick: minusOne },
+            " -1"
+        ),
+        React.createElement(
+            "button",
+            { onClick: reset },
+            " Reset"
+        )
+    );
+    ReactDOM.render(template3, appRoot);
+};
 
-var appRoot = document.getElementById('app');
-
-ReactDOM.render(template3, appRoot);
+renderCounterApp();
