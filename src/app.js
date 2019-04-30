@@ -9,12 +9,13 @@ var appObject = {
 var template2 = (
     <div> 
         <p> {appObject.title} </p>
-        <p> {appObject.subTitle} </p>
-        <ol>
-            <li>Item One</li>
-            <li> Item Two</li>
-            <li> Item Three</li>
-        </ol>
+        {appObject.subTitle && <p>{appObject.subTitle}</p> } 
+        { appObject.options.length > 0 ? <ol>
+                            <li>Item One</li>
+                            <li> Item Two</li>
+                            <li> Item Three</li>
+                        </ol> : "No options" }
+        
     </div>
 );
 var appRoot = document.getElementById('app');
