@@ -7,19 +7,26 @@ var template = React.createElement(
     null,
     " This is JSX!!"
 );
-
+var appObject = {
+    title: "Root",
+    subTitle: "RootSub"
+};
 var template2 = React.createElement(
     "div",
     null,
     React.createElement(
         "p",
         null,
-        " Jal "
+        " ",
+        appObject.title,
+        " "
     ),
     React.createElement(
         "p",
         null,
-        " Panchal "
+        " ",
+        appObject.subTitle,
+        " "
     ),
     React.createElement(
         "p",
