@@ -27,7 +27,12 @@ var template2 = React.createElement(
         null,
         appObject.subTitle
     ),
-    appObject.options.length > 0 ? React.createElement(
+    React.createElement(
+        "p",
+        null,
+        appObject.options.length > 0 ? "Here are your options" : "No options"
+    ),
+    React.createElement(
         "ol",
         null,
         React.createElement(
@@ -45,7 +50,7 @@ var template2 = React.createElement(
             null,
             " Item Three"
         )
-    ) : "No options"
+    )
 );
 var appRoot = document.getElementById('app');
 
