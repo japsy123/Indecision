@@ -6,54 +6,44 @@ var appObject = {
     subTitle: "RootSub",
     options: ["One", "Two"]
 }
+
+const onFormSubmit = (e) => {
+    e.preventDefault();
+
+    const option = e.target.elements.option.value;
+
+    if(option) {
+        appObject.options.push(option);
+        e.target.elements.option.value = "";
+        render();
+    }
+}
 var appRoot = document.getElementById('app');
 
-var template2 = (
-    <div> 
-        <p> {appObject.title} </p>
-        {appObject.subTitle && <p>{appObject.subTitle}</p> } 
-        <p>{ appObject.options.length >0 ? "Here are your options" : "No options" }</p>
-        <ol>
-            <li>Item One</li>
-            <li> Item Two</li>
-            <li> Item Three</li>
-        </ol> 
-    </div>
-);
 
-let count = 0;
+const render = () => {
 
-const addOne = () => {
+    var template2 = (
+        <div> 
+            <p> {appObject.title} </p>
+            {appObject.subTitle && <p>{appObject.subTitle}</p> } 
+            <p>{ appObject.options.length >0 ? "Here are your options" : "No options" }
+            </p>
+            <p>{appObject.options.length}</p>
+            <ol>
+                <li>Item One</li>
+                <li> Item Two</li>
+                <li> Item Three</li>
+            </ol> 
+            <form onSubmit= {onFormSubmit}>
+            <input type="text" name="option"/>
+            <button>Add options</button>
+            </form>
+        </div>
+    );
 
-    count++;
-    console.log("Add")
-    renderCounterApp()
-
-}
-const minusOne= () => {
-    count--;
-    console.log("Minus")
-    renderCounterApp()
-}
-
-const reset = () => {
-
-    count = 0;
-    console.log("Reset")
-    renderCounterApp()
+    ReactDOM.render(template2, appRoot)
 
 }
-const renderCounterApp  = () => {
-    const template3 =(
-        <div>
-         <h1>Count: {count}</h1>
-         <button onClick={addOne}>+1 </button>
-         <button onClick={minusOne}> -1</button>
-         <button onClick={reset}> Reset</button>
-         </div>
-    )
-    ReactDOM.render(template3, appRoot)
-}  
 
-
-renderCounterApp();
+render();
