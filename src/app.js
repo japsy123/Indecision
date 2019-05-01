@@ -1,3 +1,4 @@
+
 console.log("app is running")
 
 var template = <p> This is JSX!!</p>
@@ -31,9 +32,9 @@ const render = () => {
             </p>
             <p>{appObject.options.length}</p>
             <ol>
-                <li>Item One</li>
-                <li> Item Two</li>
-                <li> Item Three</li>
+               {appObject.options.map((option)=>{
+                    return <li key={option}>Option: {option}</li>
+               })}
             </ol> 
             <form onSubmit= {onFormSubmit}>
             <input type="text" name="option"/>
