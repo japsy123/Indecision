@@ -94,12 +94,40 @@ var Options = function (_React$Component3) {
     return Options;
 }(React.Component);
 
+var Addoptions = function (_React$Component4) {
+    _inherits(Addoptions, _React$Component4);
+
+    function Addoptions() {
+        _classCallCheck(this, Addoptions);
+
+        return _possibleConstructorReturn(this, (Addoptions.__proto__ || Object.getPrototypeOf(Addoptions)).apply(this, arguments));
+    }
+
+    _createClass(Addoptions, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(
+                    'p',
+                    null,
+                    ' What are my other options'
+                )
+            );
+        }
+    }]);
+
+    return Addoptions;
+}(React.Component);
+
 var jsx = React.createElement(
     'div',
     null,
     React.createElement(Header, null),
     React.createElement(Action, null),
-    React.createElement(Options, null)
+    React.createElement(Options, null),
+    React.createElement(Addoptions, null)
 );
 
 ReactDOM.render(jsx, document.getElementById('app'));

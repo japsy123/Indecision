@@ -34,6 +34,17 @@ class Options extends React.Component {
     }
 }
 
+class Addoptions extends React.Component {
+    
+    render() {
+        return (
+            <div>
+                <p> What are my other options</p>
+            </div>
+        )
+    }
+}
+
 const jsx = (
     <div>
         <Header>
@@ -41,6 +52,7 @@ const jsx = (
         <Action>
         </Action>
         <Options />
+        <Addoptions />
     </div>
 )
 
