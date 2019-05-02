@@ -10,3 +10,24 @@ class Header extends React.Component {
     }
 
 }
+
+class Action extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <button> What should we do ?</button>
+            </div>
+        )
+    }
+
+}
+
+const jsx = (
+    <div>
+        <Header>
+        </Header>
+        <Action>
+        </Action>
+    </div>
+)
