@@ -23,11 +23,25 @@ class Action extends React.Component {
 
 }
 
+class Options extends React.Component {
+    
+    render() {
+        return (
+            <div>
+                <p> What are my options</p>
+            </div>
+        )
+    }
+}
+
 const jsx = (
     <div>
         <Header>
         </Header>
         <Action>
         </Action>
+        <Options />
     </div>
 )
+
+ReactDOM.render(jsx,document.getElementById('app'))
