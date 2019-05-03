@@ -112,11 +112,21 @@ var Options = function (_React$Component4) {
     }
 
     _createClass(Options, [{
+        key: "removeAll",
+        value: function removeAll() {
+            alert("Removedd.");
+        }
+    }, {
         key: "render",
         value: function render() {
             return React.createElement(
                 "div",
                 null,
+                React.createElement(
+                    "button",
+                    { onClick: this.removeAll },
+                    "Remove all"
+                ),
                 React.createElement(
                     "p",
                     null,

@@ -39,6 +39,7 @@ class Action extends React.Component {
     render() {
         return (
             <div>
+
                 <button onClick={this.handle}> What should we do ?</button>
             </div>
         )
@@ -48,9 +49,13 @@ class Action extends React.Component {
 
 class Options extends React.Component {
     
+    removeAll () {
+        alert("Removedd.")
+    }
     render() {
         return (
             <div>
+            <button onClick={this.removeAll} >Remove all</button>
                 <p> What are my options {this.props.options.length}</p>
                 {this.props.options.map((option)=> 
                      <Option key={option} optionText={option} />)}
