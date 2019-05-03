@@ -8,8 +8,34 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Header = function (_React$Component) {
-    _inherits(Header, _React$Component);
+var Indecision = function (_React$Component) {
+    _inherits(Indecision, _React$Component);
+
+    function Indecision() {
+        _classCallCheck(this, Indecision);
+
+        return _possibleConstructorReturn(this, (Indecision.__proto__ || Object.getPrototypeOf(Indecision)).apply(this, arguments));
+    }
+
+    _createClass(Indecision, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(Header, null),
+                React.createElement(Action, null),
+                React.createElement(Options, null),
+                React.createElement(Addoptions, null)
+            );
+        }
+    }]);
+
+    return Indecision;
+}(React.Component);
+
+var Header = function (_React$Component2) {
+    _inherits(Header, _React$Component2);
 
     function Header() {
         _classCallCheck(this, Header);
@@ -40,8 +66,8 @@ var Header = function (_React$Component) {
     return Header;
 }(React.Component);
 
-var Action = function (_React$Component2) {
-    _inherits(Action, _React$Component2);
+var Action = function (_React$Component3) {
+    _inherits(Action, _React$Component3);
 
     function Action() {
         _classCallCheck(this, Action);
@@ -67,8 +93,8 @@ var Action = function (_React$Component2) {
     return Action;
 }(React.Component);
 
-var Options = function (_React$Component3) {
-    _inherits(Options, _React$Component3);
+var Options = function (_React$Component4) {
+    _inherits(Options, _React$Component4);
 
     function Options() {
         _classCallCheck(this, Options);
@@ -94,8 +120,8 @@ var Options = function (_React$Component3) {
     return Options;
 }(React.Component);
 
-var Addoptions = function (_React$Component4) {
-    _inherits(Addoptions, _React$Component4);
+var Addoptions = function (_React$Component5) {
+    _inherits(Addoptions, _React$Component5);
 
     function Addoptions() {
         _classCallCheck(this, Addoptions);
@@ -120,14 +146,5 @@ var Addoptions = function (_React$Component4) {
 
     return Addoptions;
 }(React.Component);
-
-var jsx = React.createElement(
-    'div',
-    null,
-    React.createElement(Header, null),
-    React.createElement(Action, null),
-    React.createElement(Options, null),
-    React.createElement(Addoptions, null)
-);
 
 ReactDOM.render(jsx, document.getElementById('app'));
