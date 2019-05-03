@@ -6,7 +6,7 @@ class IndecisionApp extends React.Component {
         const options = ["thing one", "thing two", "thing three"]
         return (
             <div>
-            <Header >
+            <Header title={title} subTitle={subTitle} >
             </Header>
             <Action>
             </Action>
