@@ -28,7 +28,7 @@ var IndecisionApp = function (_React$Component) {
                 null,
                 React.createElement(Header, { title: title, subTitle: subTitle }),
                 React.createElement(Action, null),
-                React.createElement(Options, null),
+                React.createElement(Options, { options: options }),
                 React.createElement(Addoptions, null)
             );
         }
@@ -115,7 +115,7 @@ var Options = function (_React$Component4) {
                 React.createElement(
                     "p",
                     null,
-                    " What are my options"
+                    " What are my options "
                 ),
                 React.createElement(Option, null)
             );

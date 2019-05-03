@@ -10,7 +10,7 @@ class IndecisionApp extends React.Component {
             </Header>
             <Action>
             </Action>
-            <Options />
+            <Options  options= {options}/>
             <Addoptions />
             </div>          
         )
@@ -47,7 +47,7 @@ class Options extends React.Component {
     render() {
         return (
             <div>
-                <p> What are my options</p>
+                <p> What are my options </p>
                 <Option />
             </div>
         )
