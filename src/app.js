@@ -47,7 +47,7 @@ class Options extends React.Component {
     render() {
         return (
             <div>
-                <p> What are my options </p>
+                <p> What are my options {this.props.options.length}</p>
                 <Option />
             </div>
         )
