@@ -32,10 +32,14 @@ class Header extends React.Component {
 
 class Action extends React.Component {
 
+    handle() {
+        alert("Clicked")
+    }
+
     render() {
         return (
             <div>
-                <button> What should we do ?</button>
+                <button onClick={this.handle}> What should we do ?</button>
             </div>
         )
     }

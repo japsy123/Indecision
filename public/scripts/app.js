@@ -80,6 +80,11 @@ var Action = function (_React$Component3) {
     }
 
     _createClass(Action, [{
+        key: "handle",
+        value: function handle() {
+            alert("Clicked");
+        }
+    }, {
         key: "render",
         value: function render() {
             return React.createElement(
@@ -87,7 +92,7 @@ var Action = function (_React$Component3) {
                 null,
                 React.createElement(
                     "button",
-                    null,
+                    { onClick: this.handle },
                     " What should we do ?"
                 )
             );
