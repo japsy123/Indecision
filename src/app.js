@@ -1,9 +1,9 @@
 class IndecisionApp extends React.Component {
 
     render() {
-        const title = "Indecision",
-        const subTitle = "Put your life in hand of computer",
-        const options = ["thing one", "thing two", "thing three"]
+        const title = "Indecision";
+        const subTitle = "Put your life in hand of computer";
+        const options = ["thing one", "thing two", "thing three"];
         return (
             <div>
             <Header title={title} subTitle={subTitle} >
@@ -22,7 +22,7 @@ class Header extends React.Component {
     render() {
         return (
             <div>
-            <h1>Indecision  </h1>
+            <h1>Indecision {this.props.subTitle}</h1>
             <p>Put your hands in front of computer</p>
             </div>
         )
