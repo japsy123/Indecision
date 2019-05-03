@@ -1,9 +1,12 @@
 class IndecisionApp extends React.Component {
 
     render() {
+        const title = "Indecision",
+        const subTitle = "Put your life in hand of computer",
+        const options = ["thing one", "thing two", "thing three"]
         return (
             <div>
-            <Header>
+            <Header >
             </Header>
             <Action>
             </Action>
@@ -74,4 +77,4 @@ class Addoptions extends React.Component {
 }
 
 
-ReactDOM.render(IndecisionApp,document.getElementById('app'))
+ReactDOM.render(<IndecisionApp/>,document.getElementById('app'))
