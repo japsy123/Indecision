@@ -48,7 +48,7 @@ class Options extends React.Component {
         return (
             <div>
                 <p> What are my options {this.props.options.length}</p>
-                <Option />
+                {this.props.options.map((option)=>  <p key={option}>{option}</p>)}
             </div>
         )
     }
