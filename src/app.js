@@ -1,4 +1,4 @@
-class Indecision extends React.Component {
+class IndecisionApp extends React.Component {
 
     render() {
         return (
@@ -62,4 +62,4 @@ class Addoptions extends React.Component {
 }
 
 
-ReactDOM.render(jsx,document.getElementById('app'))
+ReactDOM.render(IndecisionApp,document.getElementById('app'))

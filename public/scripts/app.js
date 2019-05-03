@@ -8,16 +8,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Indecision = function (_React$Component) {
-    _inherits(Indecision, _React$Component);
+var IndecisionApp = function (_React$Component) {
+    _inherits(IndecisionApp, _React$Component);
 
-    function Indecision() {
-        _classCallCheck(this, Indecision);
+    function IndecisionApp() {
+        _classCallCheck(this, IndecisionApp);
 
-        return _possibleConstructorReturn(this, (Indecision.__proto__ || Object.getPrototypeOf(Indecision)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).apply(this, arguments));
     }
 
-    _createClass(Indecision, [{
+    _createClass(IndecisionApp, [{
         key: 'render',
         value: function render() {
             return React.createElement(
@@ -31,7 +31,7 @@ var Indecision = function (_React$Component) {
         }
     }]);
 
-    return Indecision;
+    return IndecisionApp;
 }(React.Component);
 
 var Header = function (_React$Component2) {
@@ -147,4 +147,4 @@ var Addoptions = function (_React$Component5) {
     return Addoptions;
 }(React.Component);
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(IndecisionApp, document.getElementById('app'));
