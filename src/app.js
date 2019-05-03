@@ -48,7 +48,8 @@ class Options extends React.Component {
         return (
             <div>
                 <p> What are my options {this.props.options.length}</p>
-                {this.props.options.map((option)=>  <p key={option}>{option}</p>)}
+                {this.props.options.map((option)=> 
+                     <Option key={option} optionText={option} />)}
             </div>
         )
     }
@@ -59,7 +60,7 @@ class Option extends React.Component {
     render(){
         return (
             <div>
-            <p>Option Component</p>
+            {this.props.optionText}
             </div>
         )
     }
