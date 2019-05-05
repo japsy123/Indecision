@@ -1,10 +1,20 @@
 class Counter extends React.Component {
   constructor(props) {
     super(props);
-    this.hanldeOnClick = this.hanldeOnClick.bind(this);
+    this.hanldeAddOne = this.hanldeAddOne.bind(this);
+    this.hanldeMinusOne = this.hanldeMinusOne.bind(this);
+    this.hanldeReset = this.hanldeReset.bind(this);
   }
 
-  hanldeOnClick() {
+  hanldeAddOne() {
+    console.log("clicked", this);
+  }
+
+  hanldeMinusOne() {
+    console.log("clicked", this);
+  }
+
+  hanldeReset() {
     console.log("clicked", this);
   }
 
@@ -12,9 +22,9 @@ class Counter extends React.Component {
     return (
       <div>
         <h1>Count</h1>
-        <button onClick={this.hanldeOnClick}> +1</button>
-        <button> -1</button>
-        <button> Reset</button>
+        <button onClick={this.hanldeAddOne}> +1</button>
+        <button onClick={this.hanldeMinusOne}> -1</button>
+        <button onClick={this.hanldeReset}> Reset</button>
       </div>
     );
   }

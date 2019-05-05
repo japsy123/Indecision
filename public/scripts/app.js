@@ -16,13 +16,25 @@ var Counter = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
 
-    _this.hanldeOnClick = _this.hanldeOnClick.bind(_this);
+    _this.hanldeAddOne = _this.hanldeAddOne.bind(_this);
+    _this.hanldeMinusOne = _this.hanldeMinusOne.bind(_this);
+    _this.hanldeReset = _this.hanldeReset.bind(_this);
     return _this;
   }
 
   _createClass(Counter, [{
-    key: "hanldeOnClick",
-    value: function hanldeOnClick() {
+    key: "hanldeAddOne",
+    value: function hanldeAddOne() {
+      console.log("clicked", this);
+    }
+  }, {
+    key: "hanldeMinusOne",
+    value: function hanldeMinusOne() {
+      console.log("clicked", this);
+    }
+  }, {
+    key: "hanldeReset",
+    value: function hanldeReset() {
       console.log("clicked", this);
     }
   }, {
@@ -38,17 +50,17 @@ var Counter = function (_React$Component) {
         ),
         React.createElement(
           "button",
-          { onClick: this.hanldeOnClick },
+          { onClick: this.hanldeAddOne },
           " +1"
         ),
         React.createElement(
           "button",
-          null,
+          { onClick: this.hanldeMinusOne },
           " -1"
         ),
         React.createElement(
           "button",
-          null,
+          { onClick: this.hanldeReset },
           " Reset"
         )
       );
