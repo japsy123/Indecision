@@ -40,11 +40,20 @@ var Counter = function (_React$Component) {
     key: "hanldeMinusOne",
     value: function hanldeMinusOne() {
       console.log("clicked", this);
+      this.setState(function (prevState) {
+        return {
+          count: prevState.count - 1
+        };
+      });
     }
   }, {
     key: "hanldeReset",
     value: function hanldeReset() {
-      console.log("clicked", this);
+      this.setState(function (prevState) {
+        return {
+          count: prevState.count = 0
+        };
+      });
     }
   }, {
     key: "render",

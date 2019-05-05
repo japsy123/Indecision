@@ -21,10 +21,19 @@ class Counter extends React.Component {
 
   hanldeMinusOne() {
     console.log("clicked", this);
+    this.setState(prevState => {
+      return {
+        count: prevState.count - 1
+      };
+    });
   }
 
   hanldeReset() {
-    console.log("clicked", this);
+    this.setState(prevState => {
+      return {
+        count: (prevState.count = 0)
+      };
+    });
   }
 
   render() {
