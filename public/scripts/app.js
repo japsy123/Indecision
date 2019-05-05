@@ -30,6 +30,7 @@ var Counter = function (_React$Component) {
     key: "hanldeAddOne",
     value: function hanldeAddOne() {
       console.log("clicked", this);
+      this.setState();
     }
   }, {
     key: "hanldeMinusOne",
@@ -50,7 +51,8 @@ var Counter = function (_React$Component) {
         React.createElement(
           "h1",
           null,
-          "Count"
+          "Count ",
+          this.state.count
         ),
         React.createElement(
           "button",

@@ -12,6 +12,7 @@ class Counter extends React.Component {
 
   hanldeAddOne() {
     console.log("clicked", this);
+    this.setState();
   }
 
   hanldeMinusOne() {
@@ -25,7 +26,7 @@ class Counter extends React.Component {
   render() {
     return (
       <div>
-        <h1>Count</h1>
+        <h1>Count {this.state.count}</h1>
         <button onClick={this.hanldeAddOne}> +1</button>
         <button onClick={this.hanldeMinusOne}> -1</button>
         <button onClick={this.hanldeReset}> Reset</button>
