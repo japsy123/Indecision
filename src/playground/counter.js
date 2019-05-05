@@ -1,9 +1,16 @@
 class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  hanldeOnClick() {
+    console.log("clicked", this);
+  }
   render() {
     return (
       <div>
         <h1>Count</h1>
-        <button> +1</button>
+        <button onClick={hanldeOnClick}> +1</button>
         <button> -1</button>
         <button> Reset</button>
       </div>
