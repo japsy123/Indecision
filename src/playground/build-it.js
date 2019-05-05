@@ -1,27 +1,29 @@
+class Visibility extends React.Component {
+  constructor(props) {
+    super(props);
+    this.Visibility = true;
+  }
+
+  change = () => {
+    if (this.Visibility) {
+      this.Visibility = false;
+    } else {
+      this.Visibility = true;
+    }
+  };
+  render = () => {
+    return (
+      <div>
+        <p> Visibility Toggle</p>
+        <button onClick={this.change}>
+          {this.Visibility ? "Show details" : " Hide details"}
+        </button>
+        {this.Visibility ? "" : <p>This is it</p>}
+      </div>
+    );
+  };
+}
+
 var appRoot = document.getElementById("app");
 
-let Visibility = true;
-
-const change = () => {
-  if (Visibility) {
-    Visibility = false;
-  } else {
-    Visibility = true;
-  }
-  render();
-};
-const render = () => {
-  const template = (
-    <div>
-      <p> Visibility Toggle</p>
-      <button onClick={change}>
-        {Visibility ? "Show details" : " Hide details"}
-      </button>
-      {Visibility ? "" : <p>This is it</p>}
-    </div>
-  );
-
-  ReactDOM.render(template, appRoot);
-};
-
-render();
+ReactDOM.render(<Visibility />, appRoot);
