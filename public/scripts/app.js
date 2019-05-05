@@ -14,7 +14,10 @@ var Counter = function (_React$Component) {
   function Counter(props) {
     _classCallCheck(this, Counter);
 
-    return _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
+
+    _this.hanldeOnClick = _this.hanldeOnClick.bind(_this);
+    return _this;
   }
 
   _createClass(Counter, [{
@@ -35,7 +38,7 @@ var Counter = function (_React$Component) {
         ),
         React.createElement(
           "button",
-          { onClick: hanldeOnClick },
+          { onClick: this.hanldeOnClick },
           " +1"
         ),
         React.createElement(
