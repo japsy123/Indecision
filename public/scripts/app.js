@@ -19,6 +19,10 @@ var Counter = function (_React$Component) {
     _this.hanldeAddOne = _this.hanldeAddOne.bind(_this);
     _this.hanldeMinusOne = _this.hanldeMinusOne.bind(_this);
     _this.hanldeReset = _this.hanldeReset.bind(_this);
+
+    _this.state = {
+      count: 0
+    };
     return _this;
   }
 

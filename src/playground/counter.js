@@ -4,6 +4,10 @@ class Counter extends React.Component {
     this.hanldeAddOne = this.hanldeAddOne.bind(this);
     this.hanldeMinusOne = this.hanldeMinusOne.bind(this);
     this.hanldeReset = this.hanldeReset.bind(this);
+
+    this.state = {
+      count: 0
+    };
   }
 
   hanldeAddOne() {
