@@ -12,7 +12,11 @@ class Counter extends React.Component {
 
   hanldeAddOne() {
     console.log("clicked", this);
-    this.setState();
+    this.setState(prevState => {
+      return {
+        count: prevState.count + 1
+      };
+    });
   }
 
   hanldeMinusOne() {
