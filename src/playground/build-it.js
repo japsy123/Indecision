@@ -1,6 +1,7 @@
 class Visibility extends React.Component {
   constructor(props) {
     super(props);
+    this.change = this.change.bind(this);
     this.state = {
       Visibility: true
     };
@@ -18,9 +19,9 @@ class Visibility extends React.Component {
       <div>
         <p> Visibility Toggle</p>
         <button onClick={this.change}>
-          {this.Visibility ? "Show details" : " Hide details"}
+          {this.state.Visibility ? "Show details" : " Hide details"}
         </button>
-        {this.Visibility ? "" : <p>This is it</p>}
+        {this.state.Visibility ? "" : <p>This is it</p>}
       </div>
     );
   }

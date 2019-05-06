@@ -16,6 +16,7 @@ var Visibility = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Visibility.__proto__ || Object.getPrototypeOf(Visibility)).call(this, props));
 
+    _this.change = _this.change.bind(_this);
     _this.state = {
       Visibility: true
     };
@@ -45,9 +46,9 @@ var Visibility = function (_React$Component) {
         React.createElement(
           "button",
           { onClick: this.change },
-          this.Visibility ? "Show details" : " Hide details"
+          this.state.Visibility ? "Show details" : " Hide details"
         ),
-        this.Visibility ? "" : React.createElement(
+        this.state.Visibility ? "" : React.createElement(
           "p",
           null,
           "This is it"
