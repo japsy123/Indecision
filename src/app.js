@@ -6,6 +6,14 @@ class IndecisionApp extends React.Component {
     };
   }
 
+  handleDelteOptions() {
+    this.setState(() => {
+      return {
+        options: []
+      };
+    });
+  }
+
   render() {
     const title = "Indecision";
     const subTitle = "Put your life in hand of computer";
