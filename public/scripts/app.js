@@ -19,6 +19,7 @@ var IndecisionApp = function (_React$Component) {
     _this.state = {
       options: ["thing one", "thing two", "thing three"]
     };
+    _this.handleDeleteOptions = _this.handleDeleteOptions.bind(_this);
     return _this;
   }
 
