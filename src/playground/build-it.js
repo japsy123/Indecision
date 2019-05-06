@@ -1,17 +1,15 @@
 class Visibility extends React.Component {
   constructor(props) {
     super(props);
-    this.Visibility = true;
+    this.state = {
+      Visibility: true
+    };
   }
 
-  change = () => {
-    if (this.Visibility) {
-      this.Visibility = false;
-    } else {
-      this.Visibility = true;
-    }
-  };
-  render = () => {
+  change() {
+    console.log("this");
+  }
+  render() {
     return (
       <div>
         <p> Visibility Toggle</p>
@@ -21,7 +19,7 @@ class Visibility extends React.Component {
         {this.Visibility ? "" : <p>This is it</p>}
       </div>
     );
-  };
+  }
 }
 
 var appRoot = document.getElementById("app");
