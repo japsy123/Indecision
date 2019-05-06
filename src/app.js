@@ -5,6 +5,7 @@ class IndecisionApp extends React.Component {
       options: ["thing one", "thing two", "thing three"]
     };
     this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
+    this.handlePick = this.handlePick.bind(this);
   }
 
   handleDeleteOptions() {

@@ -20,6 +20,7 @@ var IndecisionApp = function (_React$Component) {
       options: ["thing one", "thing two", "thing three"]
     };
     _this.handleDeleteOptions = _this.handleDeleteOptions.bind(_this);
+    _this.handlePick = _this.handlePick.bind(_this);
     return _this;
   }
 
