@@ -16,13 +16,20 @@ class IndecisionApp extends React.Component {
     });
   }
 
+  handlePick() {
+    const randomNum = Math.floor(Math.random() * this.state.options.length);
+    alert(this.state.options[randomNum]);
+  }
   render() {
     const title = "Indecision";
     const subTitle = "Put your life in hand of computer";
     return (
       <div>
         <Header title={title} subTitle={subTitle} />
-        <Action hasOptions={this.state.options.length > 0} />
+        <Action
+          hasOptions={this.state.options.length > 0}
+          handlePick={this.handlePick}
+        />
         <Options
           options={this.state.options}
           handleDeleteOptions={this.handleDeleteOptions}
