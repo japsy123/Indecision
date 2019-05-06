@@ -52,14 +52,13 @@ class Header extends React.Component {
 }
 
 class Action extends React.Component {
-  handle() {
-    alert("Clicked");
-  }
-
   render() {
     return (
       <div>
-        <button onClick={this.handle} disabled={!this.props.hasOptions}>
+        <button
+          onClick={this.props.handlePick}
+          disabled={!this.props.hasOptions}
+        >
           What should we do ?
         </button>
       </div>

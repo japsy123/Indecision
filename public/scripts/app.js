@@ -107,11 +107,6 @@ var Action = function (_React$Component3) {
   }
 
   _createClass(Action, [{
-    key: "handle",
-    value: function handle() {
-      alert("Clicked");
-    }
-  }, {
     key: "render",
     value: function render() {
       return React.createElement(
@@ -119,7 +114,10 @@ var Action = function (_React$Component3) {
         null,
         React.createElement(
           "button",
-          { onClick: this.handle, disabled: !this.props.hasOptions },
+          {
+            onClick: this.props.handlePick,
+            disabled: !this.props.hasOptions
+          },
           "What should we do ?"
         )
       );
