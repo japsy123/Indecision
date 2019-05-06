@@ -96,8 +96,8 @@ var Action = function (_React$Component3) {
         null,
         React.createElement(
           "button",
-          { onClick: this.handle },
-          " What should we do ?"
+          { onClick: this.handle, disabled: !this.props.hasOptions },
+          "What should we do ?"
         )
       );
     }
