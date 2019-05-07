@@ -18,7 +18,11 @@ class IndecisionApp extends React.Component {
   }
 
   handleAddOption(option) {
-    console.log("Here...");
+    this.setState(prevState => {
+      return {
+        options: prevState.options.concat(option)
+      };
+    });
   }
 
   handlePick() {
