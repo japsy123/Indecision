@@ -60,20 +60,15 @@ class Header extends React.Component {
   }
 }
 
-class Action extends React.Component {
-  render() {
-    return (
-      <div>
-        <button
-          onClick={this.props.handlePick}
-          disabled={!this.props.hasOptions}
-        >
-          What should we do ?
-        </button>
-      </div>
-    );
-  }
-}
+const Action = props => {
+  return (
+    <div>
+      <button onClick={this.props.handlePick} disabled={!this.props.hasOptions}>
+        What should we do ?
+      </button>
+    </div>
+  );
+};
 
 class Options extends React.Component {
   render() {
