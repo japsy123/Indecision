@@ -113,7 +113,7 @@ var Action = function Action(props) {
     null,
     React.createElement(
       "button",
-      { onClick: undefined.props.handlePick, disabled: !undefined.props.hasOptions },
+      { onClick: props.handlePick, disabled: props.hasOptions },
       "What should we do ?"
     )
   );

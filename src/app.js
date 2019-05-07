@@ -63,7 +63,7 @@ class Header extends React.Component {
 const Action = props => {
   return (
     <div>
-      <button onClick={this.props.handlePick} disabled={!this.props.hasOptions}>
+      <button onClick={props.handlePick} disabled={props.hasOptions}>
         What should we do ?
       </button>
     </div>
