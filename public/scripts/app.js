@@ -125,39 +125,24 @@ var Options = function Options(props) {
   );
 };
 
-var Option = function (_React$Component2) {
-  _inherits(Option, _React$Component2);
+var Option = function Option(props) {
+  return React.createElement(
+    "div",
+    null,
+    props.optionText
+  );
+};
 
-  function Option() {
-    _classCallCheck(this, Option);
-
-    return _possibleConstructorReturn(this, (Option.__proto__ || Object.getPrototypeOf(Option)).apply(this, arguments));
-  }
-
-  _createClass(Option, [{
-    key: "render",
-    value: function render() {
-      return React.createElement(
-        "div",
-        null,
-        this.props.optionText
-      );
-    }
-  }]);
-
-  return Option;
-}(React.Component);
-
-var Addoptions = function (_React$Component3) {
-  _inherits(Addoptions, _React$Component3);
+var Addoptions = function (_React$Component2) {
+  _inherits(Addoptions, _React$Component2);
 
   function Addoptions(props) {
     _classCallCheck(this, Addoptions);
 
-    var _this3 = _possibleConstructorReturn(this, (Addoptions.__proto__ || Object.getPrototypeOf(Addoptions)).call(this, props));
+    var _this2 = _possibleConstructorReturn(this, (Addoptions.__proto__ || Object.getPrototypeOf(Addoptions)).call(this, props));
 
-    _this3.handleOption = _this3.handleOption.bind(_this3);
-    return _this3;
+    _this2.handleOption = _this2.handleOption.bind(_this2);
+    return _this2;
   }
 
   _createClass(Addoptions, [{
