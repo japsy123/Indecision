@@ -49,16 +49,14 @@ class IndecisionApp extends React.Component {
   }
 }
 
-class Header extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Indecision {this.props.subTitle}</h1>
-        <p>Put your hands in front of computer</p>
-      </div>
-    );
-  }
-}
+const Header = props => {
+  return (
+    <div>
+      <h1>Indecision {props.subTitle}</h1>
+      <p>Put your hands in front of computer</p>
+    </div>
+  );
+};
 
 const Action = props => {
   return (
