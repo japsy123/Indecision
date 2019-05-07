@@ -6,6 +6,7 @@ class IndecisionApp extends React.Component {
     };
     this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
     this.handlePick = this.handlePick.bind(this);
+    this.handleAddOption = this.handleAddOption.bind(this);
   }
 
   handleDeleteOptions() {
@@ -38,7 +39,7 @@ class IndecisionApp extends React.Component {
           options={this.state.options}
           handleDeleteOptions={this.handleDeleteOptions}
         />
-        <Addoptions />
+        <Addoptions handleAddOption={this.handleAddOption} />
       </div>
     );
   }
