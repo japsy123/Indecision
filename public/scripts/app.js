@@ -195,10 +195,13 @@ var Option = function (_React$Component5) {
 var Addoptions = function (_React$Component6) {
   _inherits(Addoptions, _React$Component6);
 
-  function Addoptions() {
+  function Addoptions(props) {
     _classCallCheck(this, Addoptions);
 
-    return _possibleConstructorReturn(this, (Addoptions.__proto__ || Object.getPrototypeOf(Addoptions)).apply(this, arguments));
+    var _this6 = _possibleConstructorReturn(this, (Addoptions.__proto__ || Object.getPrototypeOf(Addoptions)).call(this, props));
+
+    _this6.handleOption = _this6.handleOption.bind(_this6);
+    return _this6;
   }
 
   _createClass(Addoptions, [{
@@ -209,7 +212,7 @@ var Addoptions = function (_React$Component6) {
       var option = e.target.elements.option.value.trim();
 
       if (option) {
-        alert(option);
+        this.props.handleAddOption(option);
       }
     }
   }, {

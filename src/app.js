@@ -92,13 +92,17 @@ class Option extends React.Component {
 }
 
 class Addoptions extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleOption = this.handleOption.bind(this);
+  }
   handleOption(e) {
     e.preventDefault();
 
     const option = e.target.elements.option.value.trim();
 
     if (option) {
-      alert(option);
+      this.props.handleAddOption(option);
     }
   }
   render() {
