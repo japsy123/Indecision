@@ -66,7 +66,8 @@ var IndecisionApp = function (_React$Component) {
         }),
         React.createElement(Options, {
           options: this.state.options,
-          handleDeleteOptions: this.handleDeleteOptions
+          handleDeleteOptions: this.handleDeleteOptions,
+          handleDeleteOption: handleDeleteOption
         }),
         React.createElement(Addoptions, { handleAddOption: this.handleAddOption })
       );
@@ -122,7 +123,11 @@ var Options = function Options(props) {
       props.options.length
     ),
     props.options.map(function (option) {
-      return React.createElement(Option, { key: option, optionText: option });
+      return React.createElement(Option, {
+        key: option,
+        optionText: option,
+        handleDeleteOption: handleDeleteOption
+      });
     })
   );
 };

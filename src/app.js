@@ -39,6 +39,7 @@ class IndecisionApp extends React.Component {
         <Options
           options={this.state.options}
           handleDeleteOptions={this.handleDeleteOptions}
+          handleDeleteOption={handleDeleteOption}
         />
         <Addoptions handleAddOption={this.handleAddOption} />
       </div>
@@ -71,7 +72,11 @@ const Options = props => {
       <button onClick={props.handleDeleteOptions}>Remove all</button>
       <p> What are my options {props.options.length}</p>
       {props.options.map(option => (
-        <Option key={option} optionText={option} />
+        <Option
+          key={option}
+          optionText={option}
+          handleDeleteOption={handleDeleteOption}
+        />
       ))}
     </div>
   );
