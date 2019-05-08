@@ -75,7 +75,7 @@ const Options = props => {
         <Option
           key={option}
           optionText={option}
-          handleDeleteOption={handleDeleteOption}
+          handleDeleteOption={props.handleDeleteOption}
         />
       ))}
     </div>
@@ -83,7 +83,12 @@ const Options = props => {
 };
 
 const Option = props => {
-  return <div>{props.optionText}</div>;
+  return (
+    <div>
+      {props.optionText}
+      <button onClick={props.handleDeleteOption}>Remove</button>
+    </div>
+  );
 };
 
 class Addoptions extends React.Component {

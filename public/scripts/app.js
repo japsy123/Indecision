@@ -126,7 +126,7 @@ var Options = function Options(props) {
       return React.createElement(Option, {
         key: option,
         optionText: option,
-        handleDeleteOption: handleDeleteOption
+        handleDeleteOption: props.handleDeleteOption
       });
     })
   );
@@ -136,7 +136,12 @@ var Option = function Option(props) {
   return React.createElement(
     "div",
     null,
-    props.optionText
+    props.optionText,
+    React.createElement(
+      "button",
+      { onClick: props.handleDeleteOption },
+      "Remove"
+    )
   );
 };
 
