@@ -35,7 +35,12 @@ var IndecisionApp = function (_React$Component) {
     }
   }, {
     key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps, prevState) {}
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevState.options.length !== this.state.option.length) {
+        var json = JSON.stringify(this.state.options);
+        localStorage.setItem("options", json);
+      }
+    }
   }, {
     key: "handleDeleteOption",
     value: function handleDeleteOption(optionToRemove) {
