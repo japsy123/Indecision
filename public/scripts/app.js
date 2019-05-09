@@ -34,6 +34,11 @@ var IndecisionApp = function (_React$Component) {
       });
     }
   }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var json = localStorage.getItem("options");
+    }
+  }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       if (prevState.options.length !== this.state.option.length) {
