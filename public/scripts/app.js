@@ -33,15 +33,18 @@ var IndecisionApp = function (_React$Component) {
         return { options: [] };
       });
     }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var json = localStorage.getItem("options");
-    }
+
+    //   componentDidMount() {
+    //     const json = localStorage.getItem("options");
+    //     const options = JSON.parse(json);
+
+    //     this.setState(() => ({ options }));
+    //   }
+
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
-      if (prevState.options.length !== this.state.option.length) {
+      if (prevState.options.length !== this.state.options.length) {
         var json = JSON.stringify(this.state.options);
         localStorage.setItem("options", json);
       }
