@@ -33,14 +33,16 @@ var IndecisionApp = function (_React$Component) {
         return { options: [] };
       });
     }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var json = localStorage.getItem("options");
+      var options = JSON.parse(json);
 
-    //   componentDidMount() {
-    //     const json = localStorage.getItem("options");
-    //     const options = JSON.parse(json);
-
-    //     this.setState(() => ({ options }));
-    //   }
-
+      this.setState(function () {
+        return { options: options };
+      });
+    }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
