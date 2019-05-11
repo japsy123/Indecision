@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Action from "./components/Action";
 import Addoptions from "./components/Addoptions";
 import Header from "./components/Header";
+import Options from "./components/Options";
 
 class IndecisionApp extends React.Component {
   constructor(props) {
@@ -69,22 +70,6 @@ class IndecisionApp extends React.Component {
     );
   }
 }
-
-const Options = props => {
-  return (
-    <div>
-      <button onClick={props.handleDeleteOptions}>Remove all</button>
-      <p> What are my options {props.options.length}</p>
-      {props.options.map(option => (
-        <Option
-          key={option}
-          optionText={option}
-          handleDeleteOption={props.handleDeleteOption}
-        />
-      ))}
-    </div>
-  );
-};
 
 const Option = props => {
   return (
