@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Action from "./components/Action";
+import Addoptions from "./components/Addoptions";
 
 class IndecisionApp extends React.Component {
   constructor(props) {
@@ -107,31 +108,5 @@ const Option = props => {
     </div>
   );
 };
-
-class Addoptions extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleOption = this.handleOption.bind(this);
-  }
-  handleOption(e) {
-    e.preventDefault();
-
-    const option = e.target.elements.option.value.trim();
-
-    if (option) {
-      this.props.handleAddOption(option);
-    }
-  }
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.handleOption}>
-          <input type="text" name="option" />
-          <button>Add Option</button>
-        </form>
-      </div>
-    );
-  }
-}
 
 ReactDOM.render(<IndecisionApp />, document.getElementById("app"));

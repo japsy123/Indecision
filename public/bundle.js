@@ -1022,6 +1022,10 @@ var _Action = __webpack_require__(35);
 
 var _Action2 = _interopRequireDefault(_Action);
 
+var _Addoptions = __webpack_require__(36);
+
+var _Addoptions2 = _interopRequireDefault(_Addoptions);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1116,7 +1120,7 @@ var IndecisionApp = function (_React$Component) {
           handleDeleteOptions: this.handleDeleteOptions,
           handleDeleteOption: this.handleDeleteOption
         }),
-        _react2.default.createElement(Addoptions, { handleAddOption: this.handleAddOption })
+        _react2.default.createElement(_Addoptions2.default, { handleAddOption: this.handleAddOption })
       );
     }
   }]);
@@ -1183,52 +1187,6 @@ var Option = function Option(props) {
     )
   );
 };
-
-var Addoptions = function (_React$Component2) {
-  _inherits(Addoptions, _React$Component2);
-
-  function Addoptions(props) {
-    _classCallCheck(this, Addoptions);
-
-    var _this2 = _possibleConstructorReturn(this, (Addoptions.__proto__ || Object.getPrototypeOf(Addoptions)).call(this, props));
-
-    _this2.handleOption = _this2.handleOption.bind(_this2);
-    return _this2;
-  }
-
-  _createClass(Addoptions, [{
-    key: "handleOption",
-    value: function handleOption(e) {
-      e.preventDefault();
-
-      var option = e.target.elements.option.value.trim();
-
-      if (option) {
-        this.props.handleAddOption(option);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-          "form",
-          { onSubmit: this.handleOption },
-          _react2.default.createElement("input", { type: "text", name: "option" }),
-          _react2.default.createElement(
-            "button",
-            null,
-            "Add Option"
-          )
-        )
-      );
-    }
-  }]);
-
-  return Addoptions;
-}(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(IndecisionApp, null), document.getElementById("app"));
 
@@ -10201,6 +10159,79 @@ var Action = function Action(props) {
 };
 
 exports.default = Action;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Addoptions = function (_React$Component) {
+  _inherits(Addoptions, _React$Component);
+
+  function Addoptions(props) {
+    _classCallCheck(this, Addoptions);
+
+    var _this = _possibleConstructorReturn(this, (Addoptions.__proto__ || Object.getPrototypeOf(Addoptions)).call(this, props));
+
+    _this.handleOption = _this.handleOption.bind(_this);
+    return _this;
+  }
+
+  _createClass(Addoptions, [{
+    key: "handleOption",
+    value: function handleOption(e) {
+      e.preventDefault();
+
+      var option = e.target.elements.option.value.trim();
+
+      if (option) {
+        this.props.handleAddOption(option);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          "form",
+          { onSubmit: this.handleOption },
+          _react2.default.createElement("input", { type: "text", name: "option" }),
+          _react2.default.createElement(
+            "button",
+            null,
+            "Add Option"
+          )
+        )
+      );
+    }
+  }]);
+
+  return Addoptions;
+}(_react2.default.Component);
+
+exports.default = Addoptions;
 
 /***/ })
 /******/ ]);
