@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Action from "./components/Action";
 import Addoptions from "./components/Addoptions";
+import Header from "./components/Header";
 
 class IndecisionApp extends React.Component {
   constructor(props) {
@@ -68,15 +69,6 @@ class IndecisionApp extends React.Component {
     );
   }
 }
-
-const Header = props => {
-  return (
-    <div>
-      <h1>Indecision {props.subTitle}</h1>
-      <p>Put your hands in front of computer</p>
-    </div>
-  );
-};
 
 const Options = props => {
   return (

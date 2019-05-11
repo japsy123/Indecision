@@ -1026,6 +1026,10 @@ var _Addoptions = __webpack_require__(36);
 
 var _Addoptions2 = _interopRequireDefault(_Addoptions);
 
+var _Header = __webpack_require__(37);
+
+var _Header2 = _interopRequireDefault(_Header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1110,7 +1114,7 @@ var IndecisionApp = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         null,
-        _react2.default.createElement(Header, { title: title, subTitle: subTitle }),
+        _react2.default.createElement(_Header2.default, { title: title, subTitle: subTitle }),
         _react2.default.createElement(_Action2.default, {
           hasOptions: this.state.options.length > 0,
           handlePick: this.handlePick
@@ -1127,24 +1131,6 @@ var IndecisionApp = function (_React$Component) {
 
   return IndecisionApp;
 }(_react2.default.Component);
-
-var Header = function Header(props) {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "h1",
-      null,
-      "Indecision ",
-      props.subTitle
-    ),
-    _react2.default.createElement(
-      "p",
-      null,
-      "Put your hands in front of computer"
-    )
-  );
-};
 
 var Options = function Options(props) {
   return _react2.default.createElement(
@@ -10232,6 +10218,43 @@ var Addoptions = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Addoptions;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header(props) {
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "h1",
+      null,
+      "Indecision ",
+      props.subTitle
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      "Put your hands in front of computer"
+    )
+  );
+};
+
+exports.default = Header;
 
 /***/ })
 /******/ ]);
