@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Action from "./components/Action";
 
 class IndecisionApp extends React.Component {
   constructor(props) {
@@ -72,16 +73,6 @@ const Header = props => {
     <div>
       <h1>Indecision {props.subTitle}</h1>
       <p>Put your hands in front of computer</p>
-    </div>
-  );
-};
-
-const Action = props => {
-  return (
-    <div>
-      <button onClick={props.handlePick} disabled={props.hasOptions}>
-        What should we do ?
-      </button>
     </div>
   );
 };

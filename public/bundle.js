@@ -1018,6 +1018,10 @@ var _reactDom = __webpack_require__(19);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _Action = __webpack_require__(35);
+
+var _Action2 = _interopRequireDefault(_Action);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1103,7 +1107,7 @@ var IndecisionApp = function (_React$Component) {
         "div",
         null,
         _react2.default.createElement(Header, { title: title, subTitle: subTitle }),
-        _react2.default.createElement(Action, {
+        _react2.default.createElement(_Action2.default, {
           hasOptions: this.state.options.length > 0,
           handlePick: this.handlePick
         }),
@@ -1134,18 +1138,6 @@ var Header = function Header(props) {
       "p",
       null,
       "Put your hands in front of computer"
-    )
-  );
-};
-
-var Action = function Action(props) {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "button",
-      { onClick: props.handlePick, disabled: props.hasOptions },
-      "What should we do ?"
     )
   );
 };
@@ -10178,6 +10170,37 @@ module.exports = function () {
 
   return ReactPropTypes;
 };
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Action = function Action(props) {
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "button",
+      { onClick: props.handlePick, disabled: props.hasOptions },
+      "What should we do ?"
+    )
+  );
+};
+
+exports.default = Action;
 
 /***/ })
 /******/ ]);
