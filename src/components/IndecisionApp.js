@@ -3,6 +3,7 @@ import Action from "./Action";
 import Addoptions from "./Addoptions";
 import Header from "./Header";
 import Options from "./Options";
+import Option from "./Option";
 
 export default class IndecisionApp extends React.Component {
   constructor(props) {
