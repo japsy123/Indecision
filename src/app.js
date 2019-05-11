@@ -4,6 +4,7 @@ import Action from "./components/Action";
 import Addoptions from "./components/Addoptions";
 import Header from "./components/Header";
 import Options from "./components/Options";
+import Option from "./components/Option";
 
 class IndecisionApp extends React.Component {
   constructor(props) {
@@ -70,20 +71,5 @@ class IndecisionApp extends React.Component {
     );
   }
 }
-
-const Option = props => {
-  return (
-    <div>
-      {props.optionText}
-      <button
-        onClick={e => {
-          props.handleDeleteOption(props.optionText);
-        }}
-      >
-        Remove
-      </button>
-    </div>
-  );
-};
 
 ReactDOM.render(<IndecisionApp />, document.getElementById("app"));

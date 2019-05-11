@@ -1034,6 +1034,10 @@ var _Options = __webpack_require__(38);
 
 var _Options2 = _interopRequireDefault(_Options);
 
+var _Option = __webpack_require__(39);
+
+var _Option2 = _interopRequireDefault(_Option);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1135,23 +1139,6 @@ var IndecisionApp = function (_React$Component) {
 
   return IndecisionApp;
 }(_react2.default.Component);
-
-var Option = function Option(props) {
-  return _react2.default.createElement(
-    "div",
-    null,
-    props.optionText,
-    _react2.default.createElement(
-      "button",
-      {
-        onClick: function onClick(e) {
-          props.handleDeleteOption(props.optionText);
-        }
-      },
-      "Remove"
-    )
-  );
-};
 
 _reactDom2.default.render(_react2.default.createElement(IndecisionApp, null), document.getElementById("app"));
 
@@ -10250,6 +10237,10 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Option = __webpack_require__(39);
+
+var _Option2 = _interopRequireDefault(_Option);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Options = function Options(props) {
@@ -10268,7 +10259,7 @@ var Options = function Options(props) {
       props.options.length
     ),
     props.options.map(function (option) {
-      return _react2.default.createElement(Option, {
+      return _react2.default.createElement(_Option2.default, {
         key: option,
         optionText: option,
         handleDeleteOption: props.handleDeleteOption
@@ -10278,6 +10269,42 @@ var Options = function Options(props) {
 };
 
 exports.default = Options;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Option = function Option(props) {
+  return _react2.default.createElement(
+    "div",
+    null,
+    props.optionText,
+    _react2.default.createElement(
+      "button",
+      {
+        onClick: function onClick(e) {
+          props.handleDeleteOption(props.optionText);
+        }
+      },
+      "Remove"
+    )
+  );
+};
+
+exports.default = Option;
 
 /***/ })
 /******/ ]);
