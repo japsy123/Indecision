@@ -261,6 +261,20 @@ process.umask = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(17);
+} else {
+  module.exports = __webpack_require__(18);
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
 /**
@@ -299,7 +313,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -395,7 +409,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 };
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -419,7 +433,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -476,20 +490,6 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(17);
-} else {
-  module.exports = __webpack_require__(18);
-}
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -663,7 +663,7 @@ module.exports = ExecutionEnvironment;
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -733,7 +733,7 @@ module.exports = warning;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -1008,7 +1008,7 @@ if (process.env.NODE_ENV === 'production') {
 "use strict";
 
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1016,7 +1016,7 @@ var _reactDom = __webpack_require__(19);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _IndecisionApp = __webpack_require__(40);
+var _IndecisionApp = __webpack_require__(35);
 
 var _IndecisionApp2 = _interopRequireDefault(_IndecisionApp);
 
@@ -1042,8 +1042,8 @@ _reactDom2.default.render(_react2.default.createElement(_IndecisionApp2.default,
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var f = __webpack_require__(2),
-    p = __webpack_require__(3);__webpack_require__(4);var r = __webpack_require__(1);
+var f = __webpack_require__(3),
+    p = __webpack_require__(4);__webpack_require__(5);var r = __webpack_require__(2);
 function t(a) {
   for (var b = arguments.length - 1, d = "Minified React error #" + a + "; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d" + a, e = 0; e < b; e++) {
     d += "\x26args[]\x3d" + encodeURIComponent(arguments[e + 1]);
@@ -1176,11 +1176,11 @@ if (process.env.NODE_ENV !== "production") {
 
     'use strict';
 
-    var objectAssign$1 = __webpack_require__(2);
+    var objectAssign$1 = __webpack_require__(3);
     var require$$0 = __webpack_require__(9);
-    var emptyObject = __webpack_require__(3);
-    var invariant = __webpack_require__(4);
-    var emptyFunction = __webpack_require__(1);
+    var emptyObject = __webpack_require__(4);
+    var invariant = __webpack_require__(5);
+    var emptyFunction = __webpack_require__(2);
     var checkPropTypes = __webpack_require__(6);
 
     /**
@@ -2918,11 +2918,11 @@ if (process.env.NODE_ENV === 'production') {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var aa = __webpack_require__(5);__webpack_require__(4);var l = __webpack_require__(8),
-    n = __webpack_require__(2),
+var aa = __webpack_require__(1);__webpack_require__(5);var l = __webpack_require__(8),
+    n = __webpack_require__(3),
     ba = __webpack_require__(10),
-    ca = __webpack_require__(1),
-    da = __webpack_require__(3),
+    ca = __webpack_require__(2),
+    da = __webpack_require__(4),
     ea = __webpack_require__(11),
     fa = __webpack_require__(12),
     ha = __webpack_require__(13),
@@ -5370,7 +5370,7 @@ module.exports = isNode;
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var react=__webpack_require__(5);var invariant=__webpack_require__(4);var ExecutionEnvironment=__webpack_require__(8);var _assign=__webpack_require__(2);var EventListener=__webpack_require__(10);var require$$0=__webpack_require__(9);var hyphenateStyleName=__webpack_require__(24);var emptyFunction=__webpack_require__(1);var camelizeStyleName=__webpack_require__(26);var performanceNow=__webpack_require__(28);var propTypes=__webpack_require__(30);var emptyObject=__webpack_require__(3);var checkPropTypes=__webpack_require__(6);var shallowEqual=__webpack_require__(11);var containsNode=__webpack_require__(12);var focusNode=__webpack_require__(13);var getActiveElement=__webpack_require__(14);/**
+ */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var react=__webpack_require__(1);var invariant=__webpack_require__(5);var ExecutionEnvironment=__webpack_require__(8);var _assign=__webpack_require__(3);var EventListener=__webpack_require__(10);var require$$0=__webpack_require__(9);var hyphenateStyleName=__webpack_require__(24);var emptyFunction=__webpack_require__(2);var camelizeStyleName=__webpack_require__(26);var performanceNow=__webpack_require__(28);var propTypes=__webpack_require__(30);var emptyObject=__webpack_require__(4);var checkPropTypes=__webpack_require__(6);var shallowEqual=__webpack_require__(11);var containsNode=__webpack_require__(12);var focusNode=__webpack_require__(13);var getActiveElement=__webpack_require__(14);/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
@@ -9336,7 +9336,7 @@ if (process.env.NODE_ENV !== "production") {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var ReactIs = __webpack_require__(15);
-var assign = __webpack_require__(2);
+var assign = __webpack_require__(3);
 
 var ReactPropTypesSecret = __webpack_require__(7);
 var checkPropTypes = __webpack_require__(6);
@@ -9974,250 +9974,25 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Action = function Action(props) {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "button",
-      { onClick: props.handlePick, disabled: props.hasOptions },
-      "What should we do ?"
-    )
-  );
-};
-
-exports.default = Action;
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Addoptions = function (_React$Component) {
-  _inherits(Addoptions, _React$Component);
-
-  function Addoptions(props) {
-    _classCallCheck(this, Addoptions);
-
-    var _this = _possibleConstructorReturn(this, (Addoptions.__proto__ || Object.getPrototypeOf(Addoptions)).call(this, props));
-
-    _this.handleOption = _this.handleOption.bind(_this);
-    return _this;
-  }
-
-  _createClass(Addoptions, [{
-    key: "handleOption",
-    value: function handleOption(e) {
-      e.preventDefault();
-
-      var option = e.target.elements.option.value.trim();
-
-      if (option) {
-        this.props.handleAddOption(option);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-          "form",
-          { onSubmit: this.handleOption },
-          _react2.default.createElement("input", { type: "text", name: "option" }),
-          _react2.default.createElement(
-            "button",
-            null,
-            "Add Option"
-          )
-        )
-      );
-    }
-  }]);
-
-  return Addoptions;
-}(_react2.default.Component);
-
-exports.default = Addoptions;
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Header = function Header(props) {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "h1",
-      null,
-      "Indecision ",
-      props.subTitle
-    ),
-    _react2.default.createElement(
-      "p",
-      null,
-      "Put your hands in front of computer"
-    )
-  );
-};
-
-exports.default = Header;
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Option = __webpack_require__(39);
-
-var _Option2 = _interopRequireDefault(_Option);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Options = function Options(props) {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "button",
-      { onClick: props.handleDeleteOptions },
-      "Remove all"
-    ),
-    _react2.default.createElement(
-      "p",
-      null,
-      " What are my options ",
-      props.options.length
-    ),
-    props.options.map(function (option) {
-      return _react2.default.createElement(_Option2.default, {
-        key: option,
-        optionText: option,
-        handleDeleteOption: props.handleDeleteOption
-      });
-    })
-  );
-};
-
-exports.default = Options;
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Option = function Option(props) {
-  return _react2.default.createElement(
-    "div",
-    null,
-    props.optionText,
-    _react2.default.createElement(
-      "button",
-      {
-        onClick: function onClick(e) {
-          props.handleDeleteOption(props.optionText);
-        }
-      },
-      "Remove"
-    )
-  );
-};
-
-exports.default = Option;
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Action = __webpack_require__(35);
+var _Action = __webpack_require__(36);
 
 var _Action2 = _interopRequireDefault(_Action);
 
-var _Addoptions = __webpack_require__(36);
+var _Addoptions = __webpack_require__(37);
 
 var _Addoptions2 = _interopRequireDefault(_Addoptions);
 
-var _Header = __webpack_require__(37);
+var _Header = __webpack_require__(38);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Options = __webpack_require__(38);
+var _Options = __webpack_require__(39);
 
 var _Options2 = _interopRequireDefault(_Options);
 
@@ -10324,6 +10099,231 @@ var IndecisionApp = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = IndecisionApp;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Action = function Action(props) {
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "button",
+      { onClick: props.handlePick, disabled: props.hasOptions },
+      "What should we do ?"
+    )
+  );
+};
+
+exports.default = Action;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Addoptions = function (_React$Component) {
+  _inherits(Addoptions, _React$Component);
+
+  function Addoptions(props) {
+    _classCallCheck(this, Addoptions);
+
+    var _this = _possibleConstructorReturn(this, (Addoptions.__proto__ || Object.getPrototypeOf(Addoptions)).call(this, props));
+
+    _this.handleOption = _this.handleOption.bind(_this);
+    return _this;
+  }
+
+  _createClass(Addoptions, [{
+    key: "handleOption",
+    value: function handleOption(e) {
+      e.preventDefault();
+
+      var option = e.target.elements.option.value.trim();
+
+      if (option) {
+        this.props.handleAddOption(option);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          "form",
+          { onSubmit: this.handleOption },
+          _react2.default.createElement("input", { type: "text", name: "option" }),
+          _react2.default.createElement(
+            "button",
+            null,
+            "Add Option"
+          )
+        )
+      );
+    }
+  }]);
+
+  return Addoptions;
+}(_react2.default.Component);
+
+exports.default = Addoptions;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header(props) {
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "h1",
+      null,
+      "Indecision ",
+      props.subTitle
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      "Put your hands in front of computer"
+    )
+  );
+};
+
+exports.default = Header;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Option = __webpack_require__(40);
+
+var _Option2 = _interopRequireDefault(_Option);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Options = function Options(props) {
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "button",
+      { onClick: props.handleDeleteOptions },
+      "Remove all"
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      " What are my options ",
+      props.options.length
+    ),
+    props.options.map(function (option) {
+      return _react2.default.createElement(_Option2.default, {
+        key: option,
+        optionText: option,
+        handleDeleteOption: props.handleDeleteOption
+      });
+    })
+  );
+};
+
+exports.default = Options;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Option = function Option(props) {
+  return _react2.default.createElement(
+    "div",
+    null,
+    props.optionText,
+    _react2.default.createElement(
+      "button",
+      {
+        onClick: function onClick(e) {
+          props.handleDeleteOption(props.optionText);
+        }
+      },
+      "Remove"
+    )
+  );
+};
+
+exports.default = Option;
 
 /***/ })
 /******/ ]);

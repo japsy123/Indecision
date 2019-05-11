@@ -1,12 +1,16 @@
-import React from "react";
+import React from 'react';
 
-const Header = props => {
+const Header = (props) => {
   return (
     <div>
-      <h1>Indecision {props.subTitle}</h1>
-      <p>Put your hands in front of computer</p>
+      <h1>{props.title}</h1>
+      {props.subtitle && <h2>{props.subtitle}</h2>}
     </div>
   );
+};
+
+Header.defaultProps = {
+  title: 'Indecision'
 };
 
 export default Header;
