@@ -1,25 +1,50 @@
 {
-  "name": "Indecision",
+  "name": "indecision-app",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/japsy123/Indecision.git",
-  "author": "Jal Panchal <jal08panchal@gmail.com>",
+  "author": "Andrew Mead",
   "license": "MIT",
   "scripts": {
+<<<<<<< HEAD
     "server": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server"
+||||||| merged common ancestors
+    "server": "live-server public/",
+    "build": "webpack --watch",
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+=======
+    "serve": "live-server public/",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
+>>>>>>> 19b109b3168d6ba226db5c555269091ac7dc5b1c
   },
   "dependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-loader": "7.1.1",
+    "babel-plugin-transform-class-properties": "6.24.1",
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
+<<<<<<< HEAD
     "live-server": "^1.2.1",
     "react": "16.0.0",
     "react-dom": "16.0.0",
     "webpack": "3.1.0",
     "webpack-dev-server": "2.5.1"
+||||||| merged common ancestors
+    "live-server": "^1.2.1",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "webpack": "3.1.0"
+=======
+    "live-server": "^1.2.0",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-modal": "2.2.2",
+    "validator": "8.0.0",
+    "webpack": "3.1.0",
+    "webpack-dev-server": "2.5.1"
+>>>>>>> 19b109b3168d6ba226db5c555269091ac7dc5b1c
   }
 }
